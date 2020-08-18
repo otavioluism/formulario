@@ -48,6 +48,7 @@ const Textarea:React.FC<InputProps> = ({name, rows,...rest}) => {
       rows={rows}
       {...rest} 
       />
+       {error && <span style={{color:'red', fontSize: 20, margin: 5}}>*</span>}
     </Container>
   );
 }

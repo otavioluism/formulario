@@ -32,7 +32,7 @@ const Forms:React.FC = () => {
         nome: Yup.string().required('O nome é obrigatório'),
         email: Yup.string().email('Digite um e-mail válido').required('O e-mail é obrigatório'),
         cell: Yup.string().required('O telefone de contato é obrigatório').min(9, 'No mínimo 9 números'),
-        city: Yup.string(),
+        city: Yup.string().required('Digite uma cidade'),
         sms: Yup.string().required('Digite uma mensagem'),
       });
 
@@ -88,7 +88,7 @@ const Forms:React.FC = () => {
         <p>Entre em contato conosco e solicite um orçamento sem compromisso</p>
         <Form ref={formRef} onSubmit={handleSubmit}>
           <Input name="nome" placeholder="Nome"/>
-          <Input name="email" placeholder="E-mail" type="e-mail"/>
+          <Input name="email" placeholder="E-mail" autoCapitalize="none" type="e-mail"/>
           <Input name="cell" placeholder="Telefone de contato"/>
           <Input name="city" placeholder="Cidade"/>
           <Textarea name="sms" rows={6} placeholder="Mensagem"/>

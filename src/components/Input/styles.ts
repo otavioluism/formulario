@@ -7,16 +7,13 @@ interface ContainerProps {
 }
 
 export const Container = styled.div<ContainerProps>`
-  background: #232129;
+  width: 90vw;
+  background: #fff;
   border-radius: 10px;
   border: 2px solid #232129;
   color: #636360;
   display: flex;
   align-items: center;
-
-  ${props => props.isFilled && css`
-    border-color: 232129;
-  `}
 
   ${props => props.isErrored && css`
     border-color: #c53030;
@@ -26,16 +23,21 @@ export const Container = styled.div<ContainerProps>`
      border-color: #0071BC;
   `}
 
+  ${props => props.isFilled && css`
+    border-color: #232129;
+  `}
+
   & + div {
     margin-top: 8px;
   }
 
   input {
+    font-family: Archivo;
     flex: 1;
     padding: 20px;
     background: transparent;
     border: none;
-    color: #f4ede8;
+    color: #000;
     outline: none;
     font-size: 20px;
 
@@ -47,4 +49,5 @@ export const Container = styled.div<ContainerProps>`
       margin-top: 8px;
     }
   }
+
 `;

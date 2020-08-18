@@ -46,6 +46,7 @@ const Input:React.FC<InputProps> = ({name,...rest}) => {
       onBlur={handleFilled}
       {...rest} 
       />
+      {error && <span style={{color:'red', fontSize: 20, margin: 5}}>*</span> }
     </Container>
   );
 }
