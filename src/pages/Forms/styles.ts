@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 10px 0 0;
 `;
 
 export const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: Archivo;
   h1 { 
     font-weight: 700;
@@ -24,6 +27,7 @@ export const Header = styled.header`
     letter-spacing: 0.5px;
     text-align: center;
   }
+
 
   button {
     width: 100%;

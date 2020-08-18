@@ -11,7 +11,6 @@ export const Container = styled.div<ContainerProps>`
   background: #232129;
   border-radius: 10px;
   border: 2px solid #232129;
-  padding: 25px 10px 25px 10px;
   color: #636360;
 
   display: flex;
@@ -35,6 +34,7 @@ export const Container = styled.div<ContainerProps>`
 
   textarea {
     flex: 1;
+    padding: 20px;
     background: transparent;
     border: none;
     color: #f4ede8;

@@ -10,9 +10,7 @@ export const Container = styled.div<ContainerProps>`
   background: #232129;
   border-radius: 10px;
   border: 2px solid #232129;
-  padding: 20px 10px 20px 10px;
   color: #636360;
-
   display: flex;
   align-items: center;
 
@@ -34,6 +32,7 @@ export const Container = styled.div<ContainerProps>`
 
   input {
     flex: 1;
+    padding: 20px;
     background: transparent;
     border: none;
     color: #f4ede8;
