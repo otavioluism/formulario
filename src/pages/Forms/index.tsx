@@ -2,6 +2,7 @@ import React, { useCallback, useRef } from 'react';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 import * as Yup from 'yup'
+import emailjs from 'emailjs-com';
 
 import { Container, Header } from './styles';
 
@@ -40,8 +41,32 @@ const Forms:React.FC = () => {
         abortEarly: false, // retorna todos os erros com essa propriedade falsa 
       });
 
+      const nome = data.nome; 
+      const email = data.email; 
+      const cell = data.cell;
+      const city = data.city;
+      const sms = data.sms;
+      
+      const templateParams = {
+        nome,
+        email,
+        cell,
+        city,
+        sms,
+      };
+
+      console.log(templateParams);
+
+      const response = await emailjs.send('gmail','otavio_template',templateParams, 'user_k58tvIl8TuqQgiUMswXCh')
+
+      if(response.status === 200){
+        alert('Obrigado, sua mensagem foi enviada!')
+      }else {
+        alert('Tente novamente, ocorreu um erro');
+      }
+    
       reset(); //reseta todos os campos, ou seja limpa 
-      console.log(data.cell);
+      //console.log(data.cell);
 
     } catch (err) {
       if(err instanceof Yup.ValidationError){
