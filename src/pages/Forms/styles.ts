@@ -18,6 +18,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  
 
   animation: ${appearFromLeft} 5s;
 `;
@@ -27,7 +28,6 @@ export const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Archivo;
   h1 { 
     font-weight: 700;
     font-size: 40px;
@@ -41,6 +41,7 @@ export const Header = styled.header`
     font-weight: 400;
     letter-spacing: 0.5px;
     text-align: center;
+    margin: 10px 0;
   }
 
 
@@ -53,7 +54,6 @@ export const Header = styled.header`
     background: #0071BC;
     margin-top: 15px;
     color: #fff;
-    cursor: pointer;
     transition: opacity 0.4s;
     outline: none;
 
