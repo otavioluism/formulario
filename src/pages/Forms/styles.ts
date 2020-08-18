@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const appearFromLeft = keyframes`
+from{
+  opacity: 0;
+  transform: translateX(-50px);
+}
+to {
+  opacity: 1;
+  transform: translateX(0);
+}
+`;
+
 
 export const Container = styled.div`
   height: 100vh;
@@ -6,6 +18,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  animation: ${appearFromLeft} 5s;
 `;
 
 export const Header = styled.header`
